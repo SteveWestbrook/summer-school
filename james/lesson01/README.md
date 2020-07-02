@@ -4,10 +4,12 @@ The computer you are using for this course is a Raspberry Pi Model 4b running th
 
 The first lesson will teach you a few commands that will be helpful in using your computer.
 
-## Using a terminal
+## Opening a Terminal
 A terminal is a program that allows you to type commands into your computer.  You may already be familiar with it.  You can see an icon near the top left corner of your screen - it is black and blue, and has symbols like this: `>_` in it.  Click once on this, and it will open a terminal for you.  Click the ^ button at the top right of the new window that has opened, and the terminal will take up the whole screen.  Switch back to your web browser, where you are reading these instructions, by holding down Alt and pressing Tab.  This is the fastest way to switch between programs, so give it a few practice tries until you are comfortable with it.
 
 Much of the work you do will be in the terminal.
+
+## Basic Installation
 
 The first thing you will want to do is install a program called "pinta."  This is basically the same as Paint.  Here is how you can do it: type this into your terminal:
 
@@ -39,7 +41,7 @@ Once the program has installed, see if it worked - type
 
 and press Enter.  Pinta should open up, and you should see a window with a blank canvas and some colour selectors in it.  Close that for now - we'll use it later.
 
-## More advanced installation
+## More Advanced Installation
 
 You're about to find out why it's nice to have a package manager, because we also need to install some software that isn't available in the package manager, and as you'll see, it takes more effort.  We're going to install VSCode, which helps with writing computer programs.  It doesn't have very many features, but it's free and easy to learn.
 
@@ -52,7 +54,7 @@ That takes too long to type.  So copy it from the browser.  You can do that like
 1. Use your mouse to select the line.  Make sure you select only the text in that one line, and nothing else.
 2. Hold down Ctrl (bottom left of keyboard) and then press C (C stands for "copy").
 3. Switch to the terminal with Alt-Tab.
-4. Hold down Ctrl and Shift at the same time, and then press P (P stands for "paste").  When you're copying and pasting in the terminal, you use Ctrl-Shift-C and Ctrl-Shift-P.  Everywhere else, it's Ctrl-C and Ctrl-P.  Be careful - in a terminal, Ctrl-C means "Stop Program," and it will shut down whatever program is running there!
+4. Hold down Ctrl and Shift at the same time, and then press V (which means paste).  When you're copying and pasting in the terminal, you use Ctrl-Shift-C and Ctrl-Shift-V.  Everywhere else, it's Ctrl-C and Ctrl-V.  Be careful - in a terminal, Ctrl-C means "Stop Program," and it will shut down whatever program is running there!
 5. Once you have pasted in the command, press Enter.  It will run pretty fast.
 
 The command above - the one you just pasted - first gets a special key - that's the thing starting at `wget` and going all the way up to the `|` symbol.  Then it "pipes" that key, using the pipe | character, to the next command - `sudo apt-key add -`.  That command adds the special key piped to it to a special list, which means you'll be allowed to install it.
@@ -65,4 +67,43 @@ You should practice your copy-pasting with this one as well.
 
 `curl` is another program to get a file from the internet, and `sudo bash` will run the program.  Often enough, it is very dangerous and stupid to run programs you have downloaded from the internet, but in this case we'll take the risk.  In future, be very careful about what you download and run.
 
-Just like we did with pinta, we want to make sure the program installed correctly.  Once it has run, press the button at the very top right of the screen.  A menu should pop up, and the first item on it should be called "Programming."  Hover over that with your mouse, and you should see a long list of all sorts of things.  One of them should say "Code - OSS (headmelted)."  That is the program you just installed.  Click it and it will run.  You'll need that open for our next lesson!
+Just like we did with pinta, we want to make sure the program installed correctly.  Once it has run, press the button at the very top left of the screen.  A menu should pop up, and the first item on it should be called "Programming."  Hover over that with your mouse, and you should see a long list of all sorts of things.  One of them should say "Code - OSS (headmelted)."  That is the program you just installed.  Click it and it will run.  You'll need that open for our next lesson!
+
+In future, when you are going to menus, they will be written like this:
+
+`Main > Programming > Code - OSS (headmelted)`
+
+## Setting up your project
+The first thing we'll do here is set up a place to write some code.  Go back to your terminal with Alt-Tab.  If you hold down Alt and press Tab multiple times, you can cycle through all your open windows.  Let go of both Alt and Tab when you get to the window you want.
+
+In the terminal write
+
+`mkdir -p programming/cats`
+
+That will "make a directory" (mkdir).  A directory is a holder for files on the computer.  This time, we are making a directory "programming," and then inside it we're making another directory called "cats."  Soon we'll make some files and store them in "cats."
+
+Why did we pass -p to that command?  When you see a `-` in front of a letter, or sometimes a whole word, that means it's a "flag."  Flags tell the program to do something special.  In this case, it lets you make two directories at once.  If you tried to do that without the -p flag, you would get an error.  Try this:
+
+`mkdir fake/wont/work`
+
+Do you see how you got an error?
+
+You can also look at your directories:
+
+`ls`
+
+That lists them.  You'll see a bunch of things.  Do you see `programming`?  What about `fake`?
+
+If you want to go inside a directory, you can do this:
+
+`cd programming`
+
+That will go inside your `programming` directory.  Now go inside your `cats` directory.  You will be able to see if it worked using this command:
+
+`pwd`
+
+That - "print working directory" - tells you where you are.
+
+List all the files inside `cats`.  If you are in the right place, you should see no files at all.
+
+
