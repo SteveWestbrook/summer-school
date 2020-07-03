@@ -50,7 +50,7 @@ then run the program
 
 `python3 plus.py`
 
-You should see the output
+You should see the output.
 
 ## Repeating a job
 What if you want to add numbers other than 2 and 2?  For this, you would want to ask the user what numbers they want, and then output the result.  Go back to plus.py and delete the line you have in there.  Write these lines:
@@ -66,7 +66,7 @@ Notice the text we're using to ask the user for numbers:
 
 `Enter a number\n`
 
-What's that `\n` at the end?  Well, that is called a "newline," and is denoted by a special character combination, \n.  There are others - \t is the same as pressing Tab on your keyboard, for example.
+What's that `\n` at the end?  Well, that is called a "newline," and is denoted by a special character combination, \n.  It tells python to move to the next line - otherwise, your input would be on the same line as the "Enter a number" text.  There are others - \t is the same as pressing Tab on your keyboard, for example.
 
 So now we have two numbers, x and y.  How do we add them?  Well... first, we have to make them numbers!  That may seem strange, but what you got just now was text - it could be anything - you could type in "abc" instead of a number.  So we need to convert x and y to numbers:
 
